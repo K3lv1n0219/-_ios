@@ -17,7 +17,7 @@ final class DashboardStatsServiceTests: XCTestCase {
         XCTAssertEqual(stats.totalSpent, 1000)
         XCTAssertEqual(stats.spentByCategory.count, 2)
         XCTAssertEqual(stats.spentByCategory.first?.categoryName, "滑雪")
-        XCTAssertEqual(stats.spentByCategory.first?.percentage, 0.7, accuracy: 0.0001)
+        XCTAssertEqual(stats.spentByCategory.first?.percentage ?? 0, 0.7, accuracy: 0.0001)
     }
 
     func testStatsHideCategoriesWithoutExpenses() {
